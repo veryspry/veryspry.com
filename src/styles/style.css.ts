@@ -27,6 +27,6 @@ export const mainContentMaxWidth = style({
   maxWidth: '700px',
 })
 
-export const centerText = style({
-  textAlign: 'center',
+export const leftJustifiedText = style({
+  textAlign: 'left',
 })

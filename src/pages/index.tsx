@@ -1,15 +1,19 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
 import {
-  centerText,
+  leftJustifiedText,
   mainContentMaxWidth,
 } from "../styles/style.css"
 
-const bioText = `Hi! Matt Ehlinger here. I’m a Staff Software Engineer currently working on Gatsby Cloud hosting for Gatsby sites. I make sure that Gatsby’s API’s and backend services work seamlessly with the Gatsby Cloud frontend and seamlessly integrate with our partner CMS backends.`
+const Link = ({ children, href }) => (
+  <a href={href} rel="noopener noreferrer" target="_blank">
+    {children}
+  </a>
+  
+)
 
 const IndexPage = () => (
   <Layout>
@@ -22,8 +26,14 @@ const IndexPage = () => (
       alt="A Gatsby astronaut"
       style={{ marginBottom: `1.45rem` }}
     />
-    <p className={centerText}>
-      {bioText}
+    <p className={leftJustifiedText}>
+      Hi! Matt Ehlinger here. I’m a Software Engineer and as you do, I build things!
+      <br />
+      <br />
+      I'm currently working on <Link href="https://gatsbyjs.com">Gatsby Cloud</Link>, hosting for <Link href="https://github.com/gatsbyjs/gatsby">Gatsby</Link> sites. I make sure that the Gatsby Cloud API’s and backend services integrate seamlessly with our partner CMS backends and the Gatsby Cloud frontend
+      <br />
+      <br />
+      At previous startups, I worked on <Link href="https://localwp.com">Local</Link> where I helped to build a paid product offering and at <Link href="https://groundbreaker.co/">Groundbreaker</Link> where I helped crush a ground up software rebuild with a 4 person engineering team.
     </p>
   </Layout>
 )
