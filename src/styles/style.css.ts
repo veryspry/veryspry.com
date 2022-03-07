@@ -11,7 +11,6 @@ export const centeredVerticalFlex = style({
   flexDirection: 'column',
 })
 
-
 export const centeredHorizontalFlex = style({
   display: 'flex',
   justifyContent: 'center',
@@ -29,4 +28,12 @@ export const mainContentMaxWidth = style({
 
 export const leftJustifiedText = style({
   textAlign: 'left',
+})
+
+export const roundImage = style({
+  borderRadius: '50%',
+})
+
+export const marginHorizontalSmall = style({
+  margin: '0 10px',
 })
