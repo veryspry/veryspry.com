@@ -28,7 +28,7 @@ function Link({ children, href, className = '' }) {
 function IndexPage() {
   return (
     <Layout>
-      <Seo title="Hello, Matt here!" />
+      <Seo title="Loading..." />
       <StaticImage
         src="../images/cover.jpg"
         width={300}
