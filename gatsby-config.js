@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: ``,
+    description: `A classic yet simple (and elegant) website built by Matt Ehlinger`,
+    author: `Matt Ehlinger`,
+    siteUrl: `https://veryspry.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,5 +34,12 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-vanilla-extract`,
+    {
+      resolve: `gatsby-plugin-emoji-favicon`,
+      options: {
+        emoji: `📻`,
+      },
+    },
   ],
 }
