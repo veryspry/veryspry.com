@@ -28,7 +28,7 @@ function Link({ children, href, className = '' }) {
 function IndexPage() {
   return (
     <Layout>
-      <Seo title="Loading..." />
+      <Seo title="Matt Ehlinger" />
       <StaticImage
         src="../images/cover.jpg"
         width={300}
@@ -38,14 +38,15 @@ function IndexPage() {
         alt="A Gatsby astronaut"
         style={{ marginBottom: `1.45rem` }}
         className={roundImage}
+        placeholder="blurred"
       />
       <div className={centeredHorizontalFlex}>
         <Link href="https://github.com/veryspry" className={marginHorizontalSmall}>
           <StaticImage
             src="../images/github.png"
-            quality={100}
             width={32}
             alt="Matt Ehlinger\'s Github Profile"
+            placeholder="blurred"
           />
         </Link>
         <Link href="https://instagram.com/veryspry" className={marginHorizontalSmall}>
@@ -53,6 +54,7 @@ function IndexPage() {
             src="../images/instagram.png"
             alt="Matt Ehlinger's; Instagram Profile"
             width={32}
+            placeholder="blurred"
           />
         </Link>
         <Link href="https://twitter.com/veryspry" className={marginHorizontalSmall}>
@@ -60,6 +62,7 @@ function IndexPage() {
             src="../images/twitter.png"
             alt="Matt Ehlinger\'s Twitter Profile"
             width={32}
+            placeholder="blurred"
           />
         </Link>
       </div>
