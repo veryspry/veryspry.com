@@ -8,8 +8,6 @@ export const myContext = React.createContext({
 const Provider = props => {
   const [isDark, setTheme] = useState(false);
   
-  console.log({ isDark })
-
   return (
     <myContext.Provider value={{
       isDark,
