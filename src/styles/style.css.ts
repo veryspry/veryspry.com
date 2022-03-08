@@ -37,3 +37,7 @@ export const roundImage = style({
 export const marginHorizontalSmall = style({
   margin: '0 10px',
 })
+
+export const smallPadding = style({
+  padding: '15px',
+})

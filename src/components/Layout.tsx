@@ -7,6 +7,7 @@ import {
   fullViewHeight,
   mainContentMaxWidth,
   fullParentWidth,
+  smallPadding,
 } from "../styles/style.css"
 import "./layout.css"
 
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
         centeredVerticalFlex,
         fullViewHeight,
         mainContentMaxWidth,
+        smallPadding,
       )}
     >
       <main
