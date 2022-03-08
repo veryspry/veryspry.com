@@ -35,11 +35,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-vanilla-extract`,
-    {
-      resolve: `gatsby-plugin-emoji-favicon`,
-      options: {
-        emoji: `📻`,
-      },
-    },
   ],
 }
