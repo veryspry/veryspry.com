@@ -32,6 +32,8 @@ export const leftJustifiedText = style({
 
 export const roundImage = style({
   borderRadius: '50%',
+  '-webkit-border-radius': '50%',
+  '-moz-border-radius': '50%',
 })
 
 export const marginHorizontalSmall = style({
