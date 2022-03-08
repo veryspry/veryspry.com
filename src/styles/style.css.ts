@@ -2,6 +2,7 @@ import { createTheme, createThemeContract, style } from "@vanilla-extract/css";
 
 export const fullViewHeight = style({
   height: '100vh',
+  marginTop: '40px',
 })
 
 export const centeredVerticalFlex = style({
@@ -32,8 +33,6 @@ export const leftJustifiedText = style({
 
 export const roundImage = style({
   borderRadius: '50%',
-  '-webkit-border-radius': '50%',
-  '-moz-border-radius': '50%',
 })
 
 export const marginHorizontalSmall = style({
