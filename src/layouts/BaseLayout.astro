@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="site">
+			<header class="site-header">
+				<nav aria-label="Main navigation">
+					<a href="/">Matt Ehlinger</a>
+					<a href="/resume/" aria-current={Astro.url.pathname === '/resume/' || Astro.url.pathname === '/resume' ? 'page' : undefined}>resume</a>
+				</nav>
+			</header>
+			<main id="main">
+				<slot />
+			</main>
+		</div>
+	</body>
+</html>

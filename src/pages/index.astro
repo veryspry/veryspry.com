@@ -1,16 +1,15 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Matt Ehlinger | Software Engineer" description="Matt Ehlinger is a software engineer who helps teams build and ship excellent software.">
+	<h1>Matt Ehlinger</h1>
+	<p class="subtitle">Software Engineer</p>
+
+	<div class="intro">
+		<p>Hi, I'm Matt. I'm a software engineer who helps teams build and ship excellent software.</p>
+		<p>
+			Find me on <a href="https://github.com/veryspry" target="_blank" rel="noopener noreferrer">GitHub</a> and <a href="https://www.linkedin.com/in/mattehlinger/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, or send me an email at <a href="mailto:contact@veryspry.com">contact@veryspry.com</a>.
+		</p>
+	</div>
+</BaseLayout>
