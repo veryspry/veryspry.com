@@ -10,22 +10,22 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="[color-scheme:light_dark]">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<div class="site">
-			<header class="site-header">
-				<nav aria-label="Main navigation">
-					<a href="/">Matt Ehlinger</a>
+	<body class="bg-[#f7f6f1] font-mono text-base leading-[1.7] text-[#252823] [font-synthesis:none] dark:bg-[#171c19] dark:text-[#e3e8dd] [&_a]:text-[#245e47] [&_a]:underline [&_a]:decoration-1 [&_a]:underline-offset-[0.2em] [&_a:hover]:decoration-2 [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-offset-4 [&_a:focus-visible]:outline-[#245e47] dark:[&_a]:text-[#a4d7b8] dark:[&_a:focus-visible]:outline-[#a4d7b8]">
+		<div class="ml-[clamp(1.5rem,8vw,7rem)] mr-6 max-w-3xl">
+			<header class="border-b border-[#c8cfc3] pt-8 pb-5 dark:border-[#48564b]">
+				<nav aria-label="Main navigation" class="flex flex-wrap gap-x-8 gap-y-2">
+					<a href="/" class="font-bold">Matt Ehlinger</a>
 					<a href="/resume/" aria-current={Astro.url.pathname === '/resume/' || Astro.url.pathname === '/resume' ? 'page' : undefined}>resume</a>
 				</nav>
 			</header>
-			<main id="main">
+			<main id="main" class="pt-[clamp(3.5rem,10vw,6.5rem)] pb-20">
 				<slot />
 			</main>
 		</div>
