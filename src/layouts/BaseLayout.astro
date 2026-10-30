@@ -4,9 +4,11 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description: string;
+	home?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, home = false } = Astro.props;
+const Role = home ? 'h1' : 'p';
 ---
 
 <!doctype html>
@@ -20,12 +22,13 @@ const { title, description } = Astro.props;
 	<body class="bg-white font-mono text-base leading-[1.7] text-black [font-synthesis:none] dark:bg-black dark:text-white [&_a]:text-[#db2777] [&_a]:underline [&_a]:decoration-1 [&_a]:underline-offset-[0.2em] [&_a:hover]:decoration-2 [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-offset-4 [&_a:focus-visible]:outline-black dark:[&_a:focus-visible]:outline-white">
 		<div class="ml-[clamp(1.5rem,8vw,7rem)] mr-6 max-w-3xl">
 			<header class="border-b border-neutral-300 pt-8 pb-5 dark:border-neutral-700">
-				<nav aria-label="Main navigation" class="flex flex-wrap gap-x-8 gap-y-2">
+				<nav aria-label="Main navigation" class="flex flex-wrap gap-x-8 gap-y-2 text-lg">
 					<a href="/" class="font-bold">Matt Ehlinger</a>
-					<a href="/resume/" aria-current={Astro.url.pathname === '/resume/' || Astro.url.pathname === '/resume' ? 'page' : undefined}>resume</a>
+					<a href="/resume/" aria-current={Astro.url.pathname === '/resume/' || Astro.url.pathname === '/resume' ? 'page' : undefined}>Resume</a>
 				</nav>
 			</header>
-			<main id="main" class="pt-[clamp(3.5rem,10vw,6.5rem)] pb-20">
+			<Role class="pt-5 text-base text-neutral-600 dark:text-neutral-400">Software Engineer</Role>
+			<main id="main" class:list={['pb-20', home ? 'pt-10' : 'pt-[clamp(3.5rem,10vw,6.5rem)]']}>
 				<slot />
 			</main>
 		</div>
