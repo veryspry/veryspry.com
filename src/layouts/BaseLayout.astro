@@ -8,7 +8,6 @@ interface Props {
 }
 
 const { title, description, home = false } = Astro.props;
-const Role = home ? 'h1' : 'p';
 ---
 
 <!doctype html>
@@ -19,18 +18,30 @@ const Role = home ? 'h1' : 'p';
 		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-white font-mono text-base leading-[1.7] font-light text-black [font-synthesis:none] dark:bg-black dark:text-white [&_a]:text-[#db2777] [&_a]:underline [&_a]:decoration-1 [&_a]:underline-offset-[0.2em] [&_a:hover]:decoration-2 [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-offset-4 [&_a:focus-visible]:outline-black dark:[&_a:focus-visible]:outline-white">
+	<body class="bg-[#e7e5e2] font-mono text-base leading-[1.7] font-light text-[#171216] [font-synthesis:none] dark:bg-[#171216] dark:text-[#e7e5e2] [&_a]:text-[#8445bb] dark:[&_a]:text-[#f3b2d4] [&_a:focus-visible]:outline-2 [&_a:focus-visible]:outline-offset-4 [&_a:focus-visible]:outline-black dark:[&_a:focus-visible]:outline-white">
 		<div class="ml-[clamp(1.5rem,8vw,7rem)] mr-6 max-w-3xl">
-			<header class="border-b border-neutral-300 pt-8 pb-5 dark:border-neutral-700">
+			<header class="pt-8 pb-5">
 				<nav aria-label="Main navigation" class="flex flex-wrap gap-x-8 gap-y-2 text-lg">
 					<a href="/" class="font-medium">Matt Ehlinger</a>
 					<a href="/resume/" aria-current={Astro.url.pathname === '/resume/' || Astro.url.pathname === '/resume' ? 'page' : undefined}>Resume</a>
 				</nav>
 			</header>
-			<Role class="pt-5 text-base text-neutral-600 dark:text-neutral-400">Software Engineer</Role>
 			<main id="main" class:list={['pb-20', home ? 'pt-10' : 'pt-[clamp(3.5rem,10vw,6.5rem)]']}>
 				<slot />
 			</main>
 		</div>
 	</body>
 </html>
+
+<style>
+	header {
+		--divider-color: #8e627b;
+		background: repeating-linear-gradient(to right, var(--divider-color) 0 8px, transparent 8px 14px) bottom / 100% 1px no-repeat;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		header {
+			--divider-color: #bc8ca7;
+		}
+	}
+</style>
