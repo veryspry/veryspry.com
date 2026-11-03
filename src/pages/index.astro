@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Matt Ehlinger | Software Engineer" description="Matt Ehlinger is a software engineer who helps teams build and ship excellent software." home>
 	<div>
 		<p class="max-w-[62ch]">
-			Staff level software engineer focused on helping teams build excellent software. I specialize in:
+			<span class="underline decoration-wavy decoration-[#8445bb] dark:decoration-[#f3b2d4]">Staff Software Engineer</span> focused on helping teams build excellent software. I specialize in:
 		</p>
 		<br>
 		<ul class="list-disc pl-6">
@@ -17,4 +17,81 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			Find me on <a href="https://github.com/veryspry" target="_blank" rel="noopener noreferrer">GitHub</a> and <a href="https://www.linkedin.com/in/mattehlinger/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
 		</p>
 	</div>
+	<section class="experience-section mt-10 max-w-[62ch] p-6 text-sm sm:max-w-[72ch]" aria-labelledby="experience">
+		<h2 id="experience" class="text-[1.875rem] leading-[1.15] font-medium tracking-[-0.04em]">Experience</h2>
+
+		<div class="mt-10">
+			<div>
+				<h3 class="italic">Staff Software Engineer</h3>
+				<p><a href="https://gravitywiz.com/" target="_blank" rel="noopener noreferrer">Gravity Wiz</a></p>
+			</div>
+			<p class="mt-2">Owned new product development and technical leadership for engineering team.</p>
+		</div>
+
+		<div class="mt-10">
+			<div>
+				<h3 class="italic">Staff Software Engineer</h3>
+				<p><a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">Gatsby</a> (acquired by Netlify)</p>
+			</div>
+			<p class="mt-2">Worked on Gatsby Cloud API's, infrastructure and integrations with third party CMS's.</p>
+		</div>
+
+		<div class="mt-10">
+			<div>
+				<h3 class="italic">Founder (technical)</h3>
+				<p><a href="https://hellodeco.so/" target="_blank" rel="noopener noreferrer">Hello Deco</a>&nbsp;(archived)</p>
+			</div>
+			<p class="mt-2">Built product that turned Notion into a (nearly) complete email inbox.</p>
+		</div>
+
+		<div class="mt-10">
+			<div>
+				<h3 class="italic">Software Engineer</h3>
+				<p><a href="https://wpengine.com/" target="_blank" rel="noopener noreferrer">WP Engine</a> / <a href="https://localwp.com/" target="_blank" rel="noopener noreferrer">LocalWP</a></p>
+			</div>
+			<p class="mt-2">Owned addon development for LocalWP including API's, authentication systems, image compression and backup tools and component system.</p>
+		</div>
+
+		<div class="mt-10">
+			<div>
+				<h3 class="italic">Software Engineer</h3>
+				<p>ISYS Technologies</p>
+			</div>
+			<p class="mt-2">Built data visualization library that saved company 400K.</p>
+		</div>
+
+		<div class="mt-10">
+			<div>
+				<h3 class="italic">Junior Software Engineer</h3>
+				<p><a href="https://groundbreaker.co" target="_blank" rel="noopener noreferrer">Groundbreaker</a>&nbsp;(acquired by Janover)</p>
+			</div>
+			<p class="mt-2">Built frontend, component library and APIs for a complete product rebuild.</p>
+		</div>
+	</section>
 </BaseLayout>
+
+<style>
+	.experience-section {
+		--divider-color: #8e627b;
+		border: 1px dashed var(--divider-color);
+	}
+
+	.experience-section h3::after {
+		content: '';
+		display: block;
+		width: 2rem;
+		height: 1px;
+		margin: 0.4rem 0;
+		background-color: #aaa5a7;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.experience-section {
+			--divider-color: #bc8ca7;
+		}
+
+		.experience-section h3::after {
+			background-color: #716b70;
+		}
+	}
+</style>
