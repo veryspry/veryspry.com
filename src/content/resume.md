@@ -4,11 +4,19 @@
 
 **Staff Software Engineer** | August 2022–September 2026
 
+Small, profitable company building WordPress form plugins and integrations.
+
+- Helped shape AI-driven development practices that made new feature development
+  an estimated 60% faster.
 - Provided technical leadership for the engineering team, mentoring engineers
   and guiding code quality and maintainability.
 - Reviewed 15–20+ pull requests per week while managing a backlog of 60+ open
   reviews; used AI to accelerate code comprehension and identify potential logic
   errors.
+- Built an OAuth service for the Google Sheets integration, replacing service
+  key authentication and reducing related support tickets from an estimated 7–9
+  per week to nearly zero; the service also enabled rapid OAuth expansion to
+  other integrations.
 - Stabilized CI checks across most of 60+ repositories, improving release
   confidence and helping double weekly code-review capacity.
 - Collaborated with CTO on an internal tool that scans 60+ product repositories,
@@ -29,6 +37,9 @@
 
 **Staff Software Engineer** | April 2021–July 2022
 
+Approximately 50-person company behind an open-source React framework and
+hosting platform.
+
 - Contributed to Gatsby Cloud’s Image CDN, enabling image resizing and
   compression through query parameters with caching and cache invalidation.
 - Contributed to Cloud Content Sync and a team-led overhaul of the preview
@@ -47,6 +58,8 @@
 
 **Founder** | January 2021–November 2022
 
+Three-founder startup in the pre-fundraising stage.
+
 - Built a service that turned Notion into an email and contacts platform,
   routing messages sent to custom addresses into a user-selected Notion
   database.
@@ -59,6 +72,8 @@
 ## Flywheel (acquired by WP Engine)
 
 **Software Engineer** | March 2020–April 2021
+
+WordPress hosting and developer tools company.
 
 - Developed features for [Local](https://localwp.com/), an Electron-based
   WordPress development application with 90K+ monthly active users.
@@ -78,6 +93,9 @@
 
 **Software Engineer** | April 2019–March 2020
 
+Contracted to a large defense company developing software and hardware for
+government agencies.
+
 - Built a client-side map and graph visualization library that saved the company
   $400K in licensing costs.
 - Developed map-based views of physical node locations and 2D/3D force graphs
@@ -89,6 +107,8 @@
 ## Groundbreaker
 
 **Junior Software Engineer** | October 2018–January 2019
+
+Small startup building a real estate investment platform.
 
 - Contributed to a ground-up rebuild of a real estate investment platform
   supporting deal promotion, investment and payout distribution, and data
