@@ -23,7 +23,6 @@ const { title, description, home = false } = Astro.props;
 			<header class="pt-8 pb-5">
 				<nav aria-label="Main navigation" class="flex flex-wrap gap-x-8 gap-y-2 text-lg">
 					<a href="/" class="font-medium">Matt Ehlinger</a>
-					<a href="/resume/" aria-current={Astro.url.pathname === '/resume/' || Astro.url.pathname === '/resume' ? 'page' : undefined}>Resume</a>
 				</nav>
 			</header>
 			<main id="main" class:list={['pb-20', home ? 'pt-10' : 'pt-[clamp(3.5rem,10vw,6.5rem)]']}>
