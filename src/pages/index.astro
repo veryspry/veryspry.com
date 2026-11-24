@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { experience } from './_experience';
 ---
 
 <BaseLayout title="Matt Ehlinger | Software Engineer" description="Matt Ehlinger is a software engineer who helps teams build and ship excellent software." home>
@@ -15,53 +16,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	<section class="experience-section mt-10 max-w-[62ch] p-6 text-sm sm:max-w-[72ch]" aria-labelledby="experience">
 		<h2 id="experience" class="text-[1.875rem] leading-[1.15] font-medium tracking-[-0.04em]">Experience</h2>
 
-		<div class="mt-10">
-			<div>
-				<h3 class="italic">Staff Software Engineer</h3>
-				<p><a href="https://gravitywiz.com/" target="_blank" rel="noopener noreferrer">Gravity Wiz</a></p>
+		{experience.map(({ title, company, desc, links, note }) => (
+			<div class="mt-10">
+				<div>
+					<h3 class="italic">{title}</h3>
+					<p>
+						{links ? (
+							<>
+								{links.map((link, index) => (
+									<>{index > 0 && ' / '}<a href={link.href} target="_blank" rel="noopener noreferrer">{link.name}</a></>
+								))}
+							</>
+						) : company}
+						{note && <> {note}</>}
+					</p>
+				</div>
+				<p class="mt-2">{desc}</p>
 			</div>
-			<p class="mt-2">Owned new product development and technical leadership for small engineering team.</p>
-		</div>
-
-		<div class="mt-10">
-			<div>
-				<h3 class="italic">Staff Software Engineer</h3>
-				<p><a href="https://www.gatsbyjs.com/" target="_blank" rel="noopener noreferrer">Gatsby</a> (acquired by Netlify)</p>
-			</div>
-			<p class="mt-2">Worked on Gatsby Cloud API's, infrastructure and integrations with third party CMS's.</p>
-		</div>
-
-		<div class="mt-10">
-			<div>
-				<h3 class="italic">Founder (technical)</h3>
-				<p><a href="https://hellodeco.so/" target="_blank" rel="noopener noreferrer">Hello Deco</a>&nbsp;(archived)</p>
-			</div>
-			<p class="mt-2">Built product that turned Notion into a (nearly) complete email inbox.</p>
-		</div>
-
-		<div class="mt-10">
-			<div>
-				<h3 class="italic">Software Engineer</h3>
-				<p><a href="https://wpengine.com/" target="_blank" rel="noopener noreferrer">WP Engine</a> / <a href="https://localwp.com/" target="_blank" rel="noopener noreferrer">LocalWP</a></p>
-			</div>
-			<p class="mt-2">Owned addon development for LocalWP including API's, authentication systems, image compression and backup tools and component system.</p>
-		</div>
-
-		<div class="mt-10">
-			<div>
-				<h3 class="italic">Software Engineer</h3>
-				<p>ISYS Technologies</p>
-			</div>
-			<p class="mt-2">Built data visualization library that saved company 400K annually.</p>
-		</div>
-
-		<div class="mt-10">
-			<div>
-				<h3 class="italic">Junior Software Engineer</h3>
-				<p><a href="https://groundbreaker.co" target="_blank" rel="noopener noreferrer">Groundbreaker</a>&nbsp;(acquired by Janover)</p>
-			</div>
-			<p class="mt-2">Built frontend, component library and APIs for a complete product rebuild.</p>
-		</div>
+		))}
 	</section>
 </BaseLayout>
 
