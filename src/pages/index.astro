@@ -4,15 +4,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Matt Ehlinger | Software Engineer" description="Matt Ehlinger is a software engineer who helps teams build and ship excellent software." home>
 	<div>
-		<p class="max-w-[62ch]">
-			<span class="underline decoration-wavy decoration-[#8445bb] dark:decoration-[#f3b2d4]">Staff Software Engineer</span> focused on helping teams build excellent software. I specialize in:
+		<p class="max-w-[62ch] leading-8">
+			Staff-level Product Engineer (8+ years) specializing in <span class="highlight">early-stage product development</span> and <span class="highlight">turning ambiguous ideas into user-facing products</span>.
 		</p>
 		<br>
-		<ul class="list-disc pl-6">
-			<li>Transforming raw ideas into finished software.</li>
-			<li>0 → 1 product development.</li>
-			<li>Leveraging AI tools to increase velocity.</li>
-		</ul>
 		<p class="mt-5 max-w-[62ch]">
 			Find me on <a href="https://github.com/veryspry" target="_blank" rel="noopener noreferrer">GitHub</a> and <a href="https://www.linkedin.com/in/mattehlinger/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, or send me an email at <a href="mailto:matt@veryspry.com">matt@veryspry.com</a>.
 		</p>
@@ -71,6 +66,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
+	.highlight {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 40' preserveAspectRatio='none'%3E%3Cpath fill='%23633482' d='M2 4 L38 3 L76 4 L113 2 L151 3 L190 2 L226 4 L263 3 L298 5 L297 17 L299 34 L264 36 L226 35 L188 37 L149 36 L111 38 L74 36 L37 37 L1 35 L3 21 Z'/%3E%3C/svg%3E");
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		color: #e7e5e2;
+		padding: 0.15em 0.24em;
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+	}
+
 	.experience-section {
 		--divider-color: #8e627b;
 		border: 1px dashed var(--divider-color);
@@ -86,6 +91,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 	}
 
 	@media (prefers-color-scheme: dark) {
+		.highlight {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 40' preserveAspectRatio='none'%3E%3Cpath fill='%23e8c0d3' d='M2 4 L38 3 L76 4 L113 2 L151 3 L190 2 L226 4 L263 3 L298 5 L297 17 L299 34 L264 36 L226 35 L188 37 L149 36 L111 38 L74 36 L37 37 L1 35 L3 21 Z'/%3E%3C/svg%3E");
+			color: #171216;
+		}
+
 		.experience-section {
 			--divider-color: #bc8ca7;
 		}
